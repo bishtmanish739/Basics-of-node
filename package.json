@@ -1,0 +1,23 @@
+{
+  "name": "basic-of-node",
+  "version": "1.0.0",
+  "description": "npm",
+  "main": "index.js",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bishtmanish739/Basics-of-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bishtmanish739/Basics-of-node/issues"
+  },
+  "homepage": "https://github.com/bishtmanish739/Basics-of-node#readme"
+}
