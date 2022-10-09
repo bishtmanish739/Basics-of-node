@@ -1,21 +1,23 @@
-// what is package.json and npm init 
-// package.json is a file which track all node module used in out project
-// it is most important file in our project
-// how to recover node.module file => using npm install command 
-//nodemon is a package is used to save project and run our server contineously 
-
+//we have a process object and we can get data from console using process object
+//process contain argument vector argv array 
+const c=require("colors")
 const fs=require("fs");
-const http=require("http");
-const c=require("colors");
-const { inherits } = require("util");
-
-console.log("Hello world".blue);
-console.log("I am color module in node".red)
-fs.writeFileSync("hello.txt","Hello this is node first class");
-
-http.createServer((req,res)=>{
-   
-    res.write("<h1>Hello welcome to node first class</h1>");
+console.log(process);
+console.log(process.argv);
+console.log(process.argv[2]);
+const operation=process.argv[2];
+const filename=process.argv[3];
+if(operation==="add"){
     
-    res.end();
-}).listen(4500);
+    const filecontent=process.argv[4];
+    fs.writeFileSync(filename,filecontent);
+    console.log("File added".green);
+}
+else if(operation==="delete"){
+    fs.unlinkSync(filename);
+    console.log(filename," File deleted".red);
+
+}
+else{
+    console.log("Invalid Input".red);
+}
