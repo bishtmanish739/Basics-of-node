@@ -2,6 +2,8 @@
 // package.json is a file which track all node module used in out project
 // it is most important file in our project
 // how to recover node.module file => using npm install command 
+//nodemon is a package is used to save project and run our server contineously 
+
 const fs=require("fs");
 const http=require("http");
 const c=require("colors");
